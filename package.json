@@ -1,11 +1,11 @@
 {
   "name": "sanity-plugin-inline-svg",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha-v4",
   "description": "Sanity.io studio plugin to upload and display SVG files inline.",
-  "main": "index.js",
+  "main": "lib/svgUpload.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d lib --copy-files"
+    "prepublishOnly": "babel -D -d lib/ src/"
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,13 @@
   ],
   "author": "Artem Artemov",
   "license": "MIT",
-  "peerDependencies": {
-    "react": "^16.9.0"
-  },
+
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react": "^6.24.1"
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0"
   },
   "dependencies": {
     "babel-plugin-syntax-class-properties": "^6.13.0",

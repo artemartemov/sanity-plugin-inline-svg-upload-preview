@@ -5,8 +5,8 @@
   },
   "parts": [
     {
-      "name": "part:sanity-plugin/sanity-plugin-inline-svg",
-      "path": "./src/svgUpload.js"
+      "implements": "part:sanity-plugin/sanity-plugin-inline-svg",
+      "path": "index.js"
     }
   ]
 }
