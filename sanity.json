@@ -1,0 +1,12 @@
+{
+  "paths": {
+    "compiled": "./lib",
+    "source": "./src"
+  },
+  "parts": [
+    {
+      "name": "part:sanity-plugin/sanity-plugin-inline-svg",
+      "path": "./src/svgUpload.js"
+    }
+  ]
+}
