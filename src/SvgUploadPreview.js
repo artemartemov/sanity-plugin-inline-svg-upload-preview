@@ -36,15 +36,28 @@ class SvgStringInput extends React.Component {
     const { value, type, level } = this.props;
     return (
       <FormField label={type.title} level={level} description={type.description}>
-        <input ref={this.inputRef} type="file" placeholder={type.placeholder} onChange={this.handleChange} />
-        {value && (
-          <div className={styles.svgPreviewBackground}>
-            <div dangerouslySetInnerHTML={{ __html: value }} />
-            <button type="button" onClick={() => this.props.onChange(PatchEvent.from(unset()))}>
-              Remove
-            </button>
-          </div>
-        )}
+        <div className={`${styles.svgPreviewBackground} ${value && styles.hasValue}`}>
+          <input
+            accept=".svg"
+            ref={this.inputRef}
+            type="file"
+            placeholder={type.placeholder}
+            onChange={this.handleChange}
+            name="svg_upload"
+          />
+          {value && (
+            <div className={styles.svgWrapper}>
+              <div dangerouslySetInnerHTML={{ __html: value }} />
+              <button
+                className={styles.updateSvg}
+                type="button"
+                onClick={() => this.props.onChange(PatchEvent.from(unset()))}
+              >
+                Remove SVG
+              </button>
+            </div>
+          )}
+        </div>
       </FormField>
     );
   }
