@@ -27,7 +27,7 @@ sanity install sanity-plugin-inline-svg
 ```js
 import svgUploadPreview from 'sanity-plugin-inline-svg';
 ```
-
+![](https://media.giphy.com/media/iF0wlg8tIsftlFwYNi/giphy.gif)
 
 **Long version:** In your schema definitions (think `schemas/clientList.js`):
 
@@ -49,6 +49,7 @@ export default {
 
 
 **Within Array:**
+![](https://media.giphy.com/media/Lq0d4kcJcldbpnrhH2/giphy.gif)
 
 1. Create an object schema something like `schemas/svgUploadArray.js`
 ```js
