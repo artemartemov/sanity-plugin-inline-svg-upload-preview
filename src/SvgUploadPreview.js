@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PatchEvent, set, unset } from 'part:@sanity/form-builder/patch-event';
 import FormField from 'part:@sanity/components/formfields/default';
+import SanitizedSVG from './sanitizedSvg';
 import styles from './SvgUploadPreview.css';
 
 class SvgStringInput extends React.Component {
@@ -34,6 +35,7 @@ class SvgStringInput extends React.Component {
 
   render() {
     const { value, type, level } = this.props;
+
     return (
       <FormField label={type.title} level={level} description={type.description}>
         <div className={`${styles.svgPreviewBackground} ${value && styles.hasValue}`}>
@@ -43,11 +45,12 @@ class SvgStringInput extends React.Component {
             type="file"
             placeholder={type.placeholder}
             onChange={this.handleChange}
+            onSubmit={this.onSubmit}
             name="svg_upload"
           />
           {value && (
             <div className={styles.svgWrapper}>
-              <div dangerouslySetInnerHTML={{ __html: value }} />
+              <SanitizedSVG html={value} />
               <button
                 className={styles.updateSvg}
                 type="button"

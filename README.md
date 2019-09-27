@@ -122,4 +122,4 @@ export default {
 ## TODO
 - [ ] Allow styles to override
 - [ ] Move `Upload SVG` CTA to react component from css
-- [ ] Clean up some syntax
+- [x] ~Clean up some syntax~ sanitized svg on upload
