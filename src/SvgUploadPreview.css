@@ -67,8 +67,13 @@
 }
 
 .svgPreviewBackground input[type=file] {
+	cursor: pointer;
 	opacity: 0;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
 }
