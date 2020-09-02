@@ -59,6 +59,7 @@
 	cursor: pointer;
 	top: 1rem;
 	right: 1rem;
+	z-index: 2;
 }
 
 .svgPreviewBackground:hover .updateSvg {
