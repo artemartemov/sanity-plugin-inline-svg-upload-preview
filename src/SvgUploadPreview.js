@@ -33,6 +33,13 @@ class SvgStringInput extends React.Component {
     this.inputRef.current.focus();
   }
 
+  clickedRemoveSvg() {
+    if (confirm('Are you sure you want to remove the SVG?')) {
+      this.props.onChange(PatchEvent.from(unset()))
+    }
+    return false
+  }
+
   render() {
     const { value, type, level } = this.props;
 
@@ -41,20 +48,23 @@ class SvgStringInput extends React.Component {
         <div className={`${styles.svgPreviewBackground} ${value && styles.hasValue}`}>
           <input
             accept=".svg"
+            id="svg-upload"
             ref={this.inputRef}
             type="file"
             placeholder={type.placeholder}
             onChange={this.handleChange}
-            onSubmit={this.onSubmit}
             name="svg_upload"
+            onSubmit={this.onSubmit}
           />
+          <label htmlFor="svg-upload">Upload SVG</label>
+
           {value && (
             <div className={styles.svgWrapper}>
               <SanitizedSVG html={value} />
               <button
                 className={styles.updateSvg}
                 type="button"
-                onClick={() => this.props.onChange(PatchEvent.from(unset()))}
+                onClick={() => this.clickedRemoveSvg()}
               >
                 Remove SVG
               </button>
