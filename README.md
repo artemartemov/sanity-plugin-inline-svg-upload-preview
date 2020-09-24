@@ -51,7 +51,7 @@ export default {
 
 **Within Array:**
 
-![](https://media.giphy.com/media/Lq0d4kcJcldbpnrhH2/giphy.gif)
+![](https://s1.gifyu.com/images/array-svg-upload.gif)
 
 1. Create an object schema something like `schemas/svgUploadArray.js`
 ```js
