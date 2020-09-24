@@ -27,7 +27,8 @@ sanity install sanity-plugin-inline-svg
 ```js
 import svgUploadPreview from 'sanity-plugin-inline-svg';
 ```
-![](https://media.giphy.com/media/iF0wlg8tIsftlFwYNi/giphy.gif)
+![](https://media1.giphy.com/media/TW3j4288K5n00d3YoK/giphy.gif)
+
 
 **Long version:** In your schema definitions (think `schemas/clientList.js`):
 
