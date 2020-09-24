@@ -4,6 +4,7 @@
   "description": "Sanity.io studio plugin to upload and display SVG files inline.",
   "main": "lib/svgUpload.js",
   "scripts": {
+    "dev": "npx babel src -d lib --copy-files --watch --source-maps",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "babel -D -d lib/ src/"
   },
